@@ -1,7 +1,7 @@
 angular.module('owmLibrary', [])
 
   .constant('OWM_API_PREFIX', 'http://api.openweathermap.org/data/2.5/forecast')
-  .constant('OWM_API_KEY', 'bc6fc7b53ddc63677411338b6228360f')
+  .constant('OWM_API_KEY', '9580c0b243aebba4d6bd92508f23d5c8')
   .constant('OWM_CITIES_JSON_FILE', './owm-cities.json')
   .factory('owmRequest', ['$http', '$q', 'OWM_API_PREFIX', 'OWM_API_KEY', function($http, $q, OWM_API_PREFIX, OWM_API_KEY){
     return function(params){
