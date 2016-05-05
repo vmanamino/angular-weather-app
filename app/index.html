@@ -11,6 +11,16 @@
 </head>
 
 <body class="owm-body">
+  <div class="navbar owm-history" ng-controller="HistoryCtrl">
+    <div ng-repeat="listing in listings">
+      <div ng-if="listing.isHome">
+        <a ng-href="#/">Home</a>
+      </div>
+      <div ng-if="!listing.isHome">
+        <a ng-href="#!/cities/{{ listing.name }}">{{ listing.name }}</a>
+      </div>
+    </div>
+  </div>
   <div class="navbar owm-navigation">
     <ul>
       <li><a href="#!/">US Cities</a></li>
@@ -33,6 +43,7 @@
 <script src="./home/near-me.js"></script>
 <script src="./cities/city.js"></script>
 <script src="./owm-app.js"></script>
+<script src="./owm-history.js"></script>
 <!-- endbuild -->
 </body>
 </html>
